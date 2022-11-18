@@ -23,3 +23,20 @@ The dataset contains the following columns:
 - **Koordinaten:** Latitude and longitude of the charging station as string in the format "49.76918,11.33907" with the first decimal being the latitude and the second decimal being the longitude
 - **Normalladeeinrichtung:** Specifies whether the charging station is a regular charging station or a fast-charge charging station as string
 The most important columns in this dataset are "Anzahl Ladepunkte", "Postleitzahl", "Inbetriebnahme" and "Normalladeeinrichtung". These will be used to combine this dataset with the other dataset using the zip code, as well as to provide means of drilling down into the data by date and type of charging station (fast vs. regular).
+# Bestand an Kraftfahrzeugen und Kraftfahrzeuganhängern nach Gemeinden (FZ 3)
+This dataset contains data on the number of registered motor vehicles at the Kraftfahrbundesamt in Germany by various administrative layers as of January 1st 2022. The data is consolidated at the Kraftfahrbundesamt from the various admission offices across the country. The data is provided by the Kraftfahrbundesamt as .xls file. It can be found on [govdata.de](https://www.govdata.de/web/guest/suchen/-/details/bestand-an-kraftfahrzeugen-und-kraftfahrzeuganhangern-nach-gemeinden-fz-3). For districts containing multiple zip codes, the count is summarized under the lowest zip code of the district.
+This dataset is the second key part that is required to enable the desired application, as the count of registered cars can be used as a proxy for the demand for charging station. However, it should be noted, that there is no distinguishing between electrical and fuel-based cars. Hence, I assume a rather uniform distribution of the share of electrical vehicles across the different regions of Germany.
+The dataset contains the following columns:
+- **Land:** State of Germany provided as string
+- **Zulassungsbezirk:** District of Germany and its ID provided as string in the format "Name (ID)"
+- **PLZ, Gemeinde:** Zip code and name of the municipality provided as string in the format "PLZ  Name"
+- **Krafträder:** Count of registered motorcycles as integer
+- **Personenkraftwagen insgesamt:** Total count of registered passenger cars as integer
+- **Personenkraftwagen darunter gewerbliche Halter:** Count of registered passenger cars registered by a business as integer
+- **Lastkraftwagen:** Count of regsitered trucks as integer
+- **Zugmaschinen insgesamt:** Total count of registered tractors as integer
+- **Zugmaschinen dar.land-/forstwirtschaftliche Zugmaschinen:** Count of registered tractors used for agricultural or forestry puposes as integer
+- **Sonstige Kfz einschl. Kraftomnibusse:** Count of other types of motor vehicles including buses as integer
+- **Kraftfahrzeuge insgesamt:** Total count of motor vehicles as integer
+- **Kraftfahrzeuganhänger:** Count of motor vehicle trailers as integer
+The most important columns in this dataset are "PLZ, Gemeinde" and "Personenkraftwagen insgesamt". The former will be used to join the data with the first dataset. The latter will be used as a proxy for the demand for electrical charging stations.
