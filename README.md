@@ -9,6 +9,7 @@ Matrikelnummer: 11154630
 ## Content
 
 This repository contains the following files:
+- README.md
 - dataset_description.md
 - application_conceptualization.md
 - methodic_procedure.md
