@@ -1,5 +1,5 @@
 # DIS08_PA_Schmitt - Personal Assignment
-Personal assignemnt for the DIS08 module for the winter semester in 2022.
+Personal assignemnt for the DIS08 module for the winter semester in 2022/23.
 
 ## Student Data
 
