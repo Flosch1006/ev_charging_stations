@@ -14,3 +14,9 @@ This repository contains the following files:
 - application_conceptualization.md
 - methodic_procedure.md
 - application.ipynb
+
+## ToDos:
+- update dataset_description.md
+- update application_conceptualization.md
+- update & fill methodic_procedure.md
+- double check application.ipynb
