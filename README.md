@@ -20,3 +20,4 @@ This repository contains the following files:
 - update application_conceptualization.md
 - update & fill methodic_procedure.md
 - double check application.ipynb
+- add readme.md for shape file data
