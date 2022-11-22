@@ -11,7 +11,7 @@ This document contains the methodical approach used to develop the application. 
 ### 1.3 Mapping Data: PLZ to Administrative Region
 - load mapping data linking PLZ and Administrative Region
 ### 1.4 Second-level Administrative Divisions, Germany, 2015
-- read geojson file containing district shapes:<br>*(For further information on how the dataset was loaded into this repository, please see the README.md file in the subdirectory "data")*
+- read geojson file containing district shapes from University of California, Berkeley shape file database
 ## 2. Data Cleaning
 This chapter outlines the steps taken in order to bring the raw data into a usable format given the context of the application
 ### 2.2 Charging Stations
