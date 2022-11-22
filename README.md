@@ -16,8 +16,4 @@ This repository contains the following files:
 - application.ipynb
 
 ## ToDos:
-- update dataset_description.md
-- update application_conceptualization.md
-- update & fill methodic_procedure.md
 - double check application.ipynb
-- add readme.md for shape file data
