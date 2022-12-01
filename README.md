@@ -17,8 +17,6 @@ This repository contains the following files:
 
 ## ToDos:
 - fix import for charging stations (line by line)
-- create data folder and add geojson file
-- add readme for geojson file (source, when, why not via link available)
 - consistency in column dropping
 - dataset description: add challenges with data structure
 - geojson dataset: add important columns

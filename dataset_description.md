@@ -132,3 +132,5 @@ The *property* dictonary contains the following keys describing the polygon:
 - **engtype_2:** English name of administrative layer type
 - **nl_name_2:** NA
 - **varname_2:** Alternative name for the district as string
+
+The most important objects of this dataframe are the *cca_2* ID as it will be used to join this dataframe to the KPI and the *geometry* object as it contains the polygon data points that will be used to create the visualization.
