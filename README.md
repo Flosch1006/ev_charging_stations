@@ -16,4 +16,15 @@ This repository contains the following files:
 - application.ipynb
 
 ## ToDos:
-- double check application.ipynb
+- fix import for charging stations (line by line)
+- create data folder and add geojson file
+- add readme for geojson file (source, when, why not via link available)
+- consistency in column dropping
+- dataset description: add challenges with data structure
+- geojson dataset: add important columns
+- describe data inconsistencies (Trier, Eisenach, Göttingen)
+- add insights as new file
+- document time mismatch between stations and vehicles
+- add order in which to view files to readme
+- add purpose of application to readme
+- add limitations file
