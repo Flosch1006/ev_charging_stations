@@ -6,6 +6,8 @@ This document contains the descriptions of the four datasets used to develop the
 - Zuordnung PLZ Ort
 - Second-level Administrative Divisions, Germany, 2015
 
+The most up to date version was used for each dataset and where possible, a live connection to the data source was implemented. The charging station dataset is pretty up-to-date, given it was last updated on November 14th 2022. The registered vehicles dataset is only published on a yearly basis, so the last iteration available is the on from December 31st 2021. This needs to be kept in mind and an update after the new data release is highly suggested.
+
 ## Deutschland: E-Ladesäulen
 This dataset contains all charging stations that can be used to charge electrical vehicles that have been registered at the Bundesnetzagentur by November 14th 2022. The data is provided by the Bundesnetzagentur and was published under "Creative Commons Namensnennung 4.0 International Lizenz". The download is hosted by the "Rheinkreis Neuss" and available as .geojson, .xls, .csv, .kml, .json and .shp file. It can be found on [govdata.de](https://www.govdata.de/web/guest/suchen/-/details/deutschland-e-ladesaulenf635c).
 This dataset is particularly interesting to me because electrical (individual) transportation will be an integral part of our way to move around for the foreseeable future. A well-developed charging station network is a key part to accelerate the adoption of electrical vehicles and identifying gaps in the charging infrastructure can be used to take action and improve the infrastructure where needed. 
