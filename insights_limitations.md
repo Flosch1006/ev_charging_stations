@@ -9,3 +9,10 @@ The following insights can be derived:
 - In general, cities offer more charging stations per 1000 cats than more rural areas do, as can be derived from the rather small districts typically being cities.
 - Also, an extreme lack of charging stations in rural areas throughout the new states being former DDR states. This is a typical pattern when it comes to infrastructural topics in Eastern states compared to Western states that can be observed here as well.
 - Surprisingly, the most densely populated area in Germany, the Ruhrgebiet, has a rather bad supply of charging stations.
+
+# Limitations
+The following limitations of this application have to be kept in mind when interpreting the visualization:
+
+- The dataset containing the registered vehicles data is only updated once a year which might result notable discrepancies towards the end of the calendar year
+- There is no explicit total of electronic vehicles provided in the data, but share of EVs on total vehicles might differ strongly from district to district.
+- The EV charging stations dataset only contains public charging station. Privately and company owned stations unavailable to public cannot be accounted for, but might account for a significant number of charging stations.
