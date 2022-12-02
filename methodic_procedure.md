@@ -37,7 +37,7 @@ This chapter outlines the steps taken in order to bring the raw data into a usab
   - loop through all the rows and append row index do drop list
   - iterate through droppable list and execute drop
 - reset index
-- fix values mismatching shape file (Trier & Eisenach):<br>*Data inconsistencies between the files were identified and have to be addressed. Here, two cities (Eisenach & Trier) were incorrectly incorporated into the surrounding districts while they should be their own district.*
+- fix values mismatching shape file (Trier & Eisenach):<br>*Data inconsistencies between the files were identified by running the application and noticing that several polygons were not plotted at all. A root cause analysis was executed. Here, two cities (Eisenach & Trier) were incorrectly incorporated into the surrounding districts while they should be their own district. The correct district_ids were assigned to the two cities.*
 - extract district id:<br>*So far, the district column was additive column consisting of the name of the district and the ID added in brackets. This column has to be split up into two columns.*
 - drop irrelevant columns
 - reorder columns
@@ -50,9 +50,11 @@ This chapter outlines the steps taken in order to bring the raw data into a usab
 - copy raw data to working df:<br>*To avoid having to load the raw dataset from the website over and over again, the raw dataframe is copied to a working version*
 - assign proper column names
 - drop irrelevant columns
-- fix values mismatching shape file (Eisenach):<br>*Similar to the adjustments made to the vehicle data, the mapping data also has to be adjusted to ensure all zip codes and district_ids can be properly linked to the polygon data.*
+- fix values mismatching shape file (Eisenach):<br>*Similar to the adjustments made to the vehicle data, the mapping data also has to be adjusted to ensure all zip codes and district_ids can be properly linked to the polygon data. In tis particular case, there was one zip code that was registered as its own district, which doesn't exist in the polygon data. The zip code was mapped to the correct district_id.*
 - strip last 3 digits of ags code:<br>*The mapping data contains the ags code on community level. The last three digits containing the community information need to be dropped for the ags code to contain district level information.*
 - remove duplicates created by truncation of district_id:<br>*The truncation above created duplicate records that now have to be removed.*
+### 2.4 Second-level Administrative Divisions
+- fix values mismatching vehicle & station data (Göttingen & Osterode am Harz):<br>*The last inconsistencies between the datasets need to be removed to ensure every district is plotted properly. Göttingen & Osterode am Harz were assigned different district_ids in the mapping file than in the polygon file which is addressed here. The fix was executed in the polygon dataset*
 ## 3. Data Merge
 - join mapping data with stations_summary using zip:<br>*Before the station data can be joined with the vehicle data, it has to be enriched with district_id information that comes in via the mapping dataframe.*
 - summarise on district level
@@ -62,7 +64,6 @@ This chapter outlines the steps taken in order to bring the raw data into a usab
 ## 5. Visualization
 This chapter outlines the steps taken in order to visualize the KPI calculated above.
 ### 5.1 Visualization Preparation
-- fix values mismatching vehicle & station data (Göttingen & Osterode am Harz):<br>*The last inconsistencies between the datasets need to be removed to ensure every district is plotted properly. Göttingen & Osterode am Harz were assigned different district_ids in the mapping file than in the polygon file which is addressed here.*
 - add KPI to districts dataframe:<br>*The KPI is added to the dataframe containing the polygon information using the district_id and the cca_2.*
 ### 5.2 Visualization Creation
 - define chart configuration
