@@ -27,6 +27,8 @@ The dataset contains the following columns:
 
 The most important columns in this dataset are "Anzahl Ladepunkte", "Postleitzahl", "Inbetriebnahme" and "Normalladeeinrichtung". These will be used to combine this dataset with the other dataset using the zip code, as well as to provide means of drilling down into the data by date and type of charging station (fast vs. regular).
 
+The challenge with this dataset is the dataload. The free text field *Addresszusatz* contains lots of string formatting such as quotation marks, linebreaks, etc. Therefore, the dataset will have to be loaded line by line rather than using the import function provided by the pandas package.
+
 # Bestand an Kraftfahrzeugen und Kraftfahrzeuganhängern nach Gemeinden (FZ 3)
 This dataset contains data on the number of registered motor vehicles at the Kraftfahrbundesamt in Germany by various administrative layers as of January 1st 2022. The data is consolidated at the Kraftfahrbundesamt from the various admission offices across the country. The data is provided by the Kraftfahrbundesamt as .xls file. It can be found on [govdata.de](https://www.govdata.de/web/guest/suchen/-/details/bestand-an-kraftfahrzeugen-und-kraftfahrzeuganhangern-nach-gemeinden-fz-3). For districts containing multiple zip codes, the count is summarized under the lowest zip code of the district.
 This dataset is the second key part that is required to enable the desired application, as the count of registered cars can be used as a proxy for the demand for charging station. However, it should be noted, that there is no distinguishing between electrical and fuel-based cars. Hence, I assume a rather uniform distribution of the share of electrical vehicles across the different regions of Germany.
@@ -46,6 +48,8 @@ The dataset contains the following columns:
 
 The most important columns in this dataset are "PLZ, Gemeinde" and "Personenkraftwagen insgesamt". The former will be used to join the data with the first dataset. The latter will be used as a proxy for the demand for electrical charging stations.
 
+The challenge with this dataset is its general formatting as it is available as an xls file that contains lots of formatting to make it look pretty. There are merged cells, empty columns, empty rows and summary rows, that have to be accounted for.
+
 ## Zuordnung PLZ Ort
 This dataset is used as a mapping table to combine the aforementioned datasets. It contains a mapping from zip codes to administrative districts and is provided by Marco Schochow, a German software developer, on his website [suche-postleitzahl.org](https://www.suche-postleitzahl.org/downloads). The raw data is sourced from OpenStreetMap.
 The dataset contains the following columns:
@@ -57,6 +61,8 @@ The dataset contains the following columns:
 - **bundesland:** Name of the state
 
 From this dataset, only the columns "ags" and "plz" will be used as its purpose is to simply map the zip codes from the vehicle data to district ids in order to join them to the charging station dataset.
+
+The challenge with this dataset is that the *ags* columns contains the ID on municipality level. This has to be adjusted to extract the ID on district level.
 
 ## Second-level Administrative Divisions, Germany, 2015
 This datsaset is used to create the final visualization. It contains polygons for every administrative district in form of geo-coordinates. It is provided by the California,  Berkeley, Museum of Vertebrate Zoology within their [Berkeley University of California Library GEODATA](https://geodata.lib.berkeley.edu/catalog/stanford-nz271ny2119). Its author is Robert J. Hijmans.
