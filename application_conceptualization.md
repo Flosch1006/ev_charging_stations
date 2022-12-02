@@ -11,4 +11,4 @@ The goal is to aggregate and join the two datasets on the lowest granularity lev
 
 Unfortunately, the data is semi-aggregated on this level as for city, not all suburban districts are given. This requires an aggregation on district level (third administrative level). This in turn requires the usage of an additional dataset, as the station count aggregation on zip code area level needs to be further aggregated on district level but this information is not explicitly available in the dataset. A mapping file linking each zip code to its corresponding district ID is used here.
 ## Features
-The application allows the user to scan a map of Germany on district level for gaps in the charging station infrastructure. Districts with poor charging station infrastructure can be derived and measures can be taken into action in order to approve the infrastructure situation.
+The application allows the user to scan a map of Germany on district level for districts where the supply of publicly available charging station lags behind compared to other districts given its demand represented by the number of registered cars.
