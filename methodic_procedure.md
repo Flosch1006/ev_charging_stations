@@ -49,9 +49,8 @@ This chapter outlines the steps taken in order to bring the raw data into a usab
 ### 2.3 Mapping Data: PLZ to Administrative Region
 - copy raw data to working df:<br>*To avoid having to load the raw dataset from the website over and over again, the raw dataframe is copied to a working version*
 - assign proper column names
-- fix values mismatching shape file (Eisenach):<br>*Similar to the adjustments made to the vehicle data, the mapping data also has to be adjusted to ensure all zip codes and district_ids can be properly linked to the polygon data.*
-- fill district column with city name if empty
 - drop irrelevant columns
+- fix values mismatching shape file (Eisenach):<br>*Similar to the adjustments made to the vehicle data, the mapping data also has to be adjusted to ensure all zip codes and district_ids can be properly linked to the polygon data.*
 - strip last 3 digits of ags code:<br>*The mapping data contains the ags code on community level. The last three digits containing the community information need to be dropped for the ags code to contain district level information.*
 - remove duplicates created by truncation of district_id:<br>*The truncation above created duplicate records that now have to be removed.*
 ## 3. Data Merge
