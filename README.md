@@ -20,7 +20,7 @@ This repository contains the following files and should be viewed in the suggest
 5. application.ipynb
 6. insights_limitations.md
 
-In addition to these files, the *data* folder contains datasets for which a live connection could not be implemented as well as a second README file with further details on why this was not possible.
+In addition to these files, the *data* folder contains datasets for which a live connection could not be implemented, as well as a second README file with further details on why this was not possible.
 
 ## Python Environment Setup
 
